@@ -1,0 +1,2 @@
+# Rails-scaffold
+Scaffold practice
