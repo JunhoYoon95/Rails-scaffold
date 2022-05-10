@@ -1,2 +1,22 @@
-<h1>Home#update_form</h1>
-<p>Find me in app/views/home/update_form.html.erb</p>
+<form action="/home/update/<%=@post.id%>" method="post">
+    <br>
+    <div class="form-group">
+        <input type="text" name="title" class="form-control"placeholder="글제목" value="<%=@post.title%>">
+    </div>
+    <br>
+    <div class="form-group">
+        <input name="author" type="text" class="form-control" placeholder="작성자"  value="<%=@post.author%>">
+    </div>
+    <br>
+    <textarea class="form-control" name="content"><%=@post.content%> </textarea>
+    <input type="submit" value="글작성" class="submit">
+</form>
+
+<style>
+    form{
+        width: 80vw;
+        margin:0 auto;
+    }
+    .submit{margin:30px;}
+input
+</style>
