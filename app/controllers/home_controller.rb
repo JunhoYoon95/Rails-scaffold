@@ -5,6 +5,15 @@ class HomeController < ApplicationController
   end
 
   def create
+    # post는 Article 에다가 새로운것을 만든다
+    @post = Article.new
+    # post에는 무엇을 넣느냐면
+    @post.title   = params[:title]
+    @post.author  = params[:author]
+    @post.content = params[:content]
+    # 등록을 하는 것이지
+    @post.save
+    redirect_to "/"
   end
 
   def update

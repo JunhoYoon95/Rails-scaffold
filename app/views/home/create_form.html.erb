@@ -1,15 +1,14 @@
 <form action="/home/create" method="post">
-<div class="form-group">
-    <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <br>
+    <div class="form-group">
+        <input type="text" name="title" class="form-control"placeholder="글제목">
     </div>
-    <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <br>
+    <div class="form-group">
+        <input name="author" type="text" class="form-control" placeholder="작성자"></input>
     </div>
-</div>
-    <textarea class="form-control" name="cotent"></textarea>
+    <br>
+    <textarea class="form-control" name="content"></textarea>
     <input type="submit" value="글작성" class="submit">
 </form>
 
