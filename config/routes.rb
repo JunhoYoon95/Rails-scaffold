@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/' => 'home#index'
   get 'home/index'
-  get 'home/create'
+  post 'home/create'
   get 'home/update'
   get 'home/delete'
   get 'home/create_form'
