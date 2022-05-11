@@ -37,4 +37,13 @@ class HomeController < ApplicationController
   def update_form
     @post = Article.find(params[:id])
   end
+
+  def reply_create
+    @post = Reply.new
+    @post.article_id   = params[:article_id]
+    @post.content      = params[:content]
+    # 등록을 하는 것이지
+    @post.save
+    redirect_to "/"
+  end
 end

@@ -11,13 +11,26 @@
         </div>
         <hr>
         <%=post.content%>
+        <hr>
+        <%# 여기다가 댓글 부분을 만들거임 %>
+        <%# 각각 post에 걸려있는 reply 에 대해서 %>
+        <%post.replies.each do |reply|%>
+        <div class="reply">
+            <%=reply.content%>
+        </div>
+        <%end%>
+        <form action="/reply/create/<%=post.id%>" method="post">
+            <textarea name="content" class="form-control"></textarea>
+            <input type="submit" class="btn btn-default"></input>
+        </form>
+
     </div>
     <%end%>
     <a href="/home/create_form">글쓰기</a>
 </div>
 
 <style>
-    .post{
+    .post, .reply{
         border:1px solid;
         margin: 30px auto;
         max-width: 1000px;
