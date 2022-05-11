@@ -17,6 +17,10 @@
         <%post.replies.each do |reply|%>
         <div class="reply">
             <%=reply.content%>
+            <div class="edit_reply">
+                <a href="/reply/update_form/<%=reply.id%>">수정</a>
+                <a href="/reply/delete/<%=reply.id%>">삭제</a>
+            </div>
         </div>
         <%end%>
         <form action="/reply/create/<%=post.id%>" method="post">
@@ -40,4 +44,5 @@
     .edit{
         float:left;
     }
+    .edit_reply { float:right}
 </style>

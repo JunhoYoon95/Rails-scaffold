@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   post 'reply/create/:article_id' => 'home#reply_create'
 
+  get 'reply/delete/:reply_id' => 'home#reply_delete'
+
+  get 'reply/update_form/:reply_id' => 'home#reply_update_form'
+
+  post 'reply/update/:reply_id' => 'home#reply_update'
+
   resources :posts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

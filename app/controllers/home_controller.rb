@@ -46,4 +46,20 @@ class HomeController < ApplicationController
     @post.save
     redirect_to "/"
   end
+
+  def reply_delete
+    Reply.find(params[:reply_id]).destroy
+    redirect_to "/"
+  end
+
+  def reply_update_form
+    @reply = Reply.find(params[:reply_id])
+  end
+
+  def reply_update
+    @reply = Reply.find(params[:reply_id])
+    @reply.content = params[:content]
+    @reply.save
+    redirect_to '/'
+  end
 end
